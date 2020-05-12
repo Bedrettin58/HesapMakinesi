@@ -1,0 +1,117 @@
+:root{
+    --hover-c:rgb(223, 199, 92);
+    --back-c-num:rgb(255, 255, 255);
+    --border:rgb(189, 198, 209);
+    --back-c-clr:rgb(255, 238, 0);
+    --back-c-opr:rgb(185, 203, 233);
+    --border-rad:7px;
+    --shadow1: 0 0 10px 2px rgb(0, 0, 0); 
+    --shadow2: 0 0 1px 1px rgb(200, 200, 200);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "result"
+        "grp2";
+    text-align: center;
+    font-size: 1.4rem;
+    grid-gap:5px;
+    padding: 10px;
+    width: 50vw;
+    margin: 10px;
+    border-radius: var(--border-rad);
+    border:1px solid rgb(100,100,100);
+    box-shadow: var(--shadow1);
+    background-color: rgb(234, 236, 227);
+  }
+  #result{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: result;
+    align-self: flex-start;
+    line-height: 5vh;
+    text-align: right;
+    height: 10vh;
+    padding-right:8px ;
+    border-radius: var(--border-rad);
+    border:1px solid var(--border);
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+  }
+  .grp2{
+    display: grid;
+    grid-area: grp2;
+    line-height: 5vh;
+    grid-gap:5px;
+    grid-template-columns:5fr 1fr;
+  }
+  .grp-clear{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:5px;
+  }
+  .grp-clear div{
+    border-radius: var(--border-rad);
+    border:1px solid var(--border);
+    background-color: var( --back-c-clr);
+    box-shadow: var(--shadow2);
+    cursor: pointer;
+    /* secme özelliğini kaldırır*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .numbers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:5px;
+  }
+  .numbers div{
+    border-radius: var(--border-rad);
+    border:1px solid var(--border);
+    background-color: var( --back-c-num);
+    box-shadow: var(--shadow2);
+    cursor: pointer;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .operators{
+    display: grid;
+    grid-row: span 2;
+    grid-gap:4px;
+  }
+  .operators div{
+    border-radius: var(--border-rad);
+    border:1px solid var(--border);
+    background-color: var( --back-c-opr);
+    box-shadow: var(--shadow2);
+    cursor: pointer;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  #back{
+    align-items: center;
+  }
+  .grp-clear div:hover, .operators div:hover, .numbers div:hover{
+    background-color: var(--hover-c);
+  }
