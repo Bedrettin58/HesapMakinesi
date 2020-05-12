@@ -12,6 +12,10 @@
     margin: 0;
     padding: 0;
 }
+body{
+  width: 70%;
+  margin: auto;
+}
 .grid-container {
     display: grid;
     grid-template-columns:1fr;
@@ -20,7 +24,7 @@
         "result"
         "grp2";
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 4vw;
     grid-gap:5px;
     padding: 10px;
     width: 50vw;
