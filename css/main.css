@@ -14,7 +14,6 @@
 }
 body{
   width: 70%;
-  margin: auto;
 }
 .grid-container {
     display: grid;
@@ -24,11 +23,13 @@ body{
         "result"
         "grp2";
     text-align: center;
-    font-size: 4vw;
+    font-size: 3.5vw;
     grid-gap:5px;
     padding: 10px;
     width: 50vw;
-    margin: 10px;
+    margin-left: 15%;
+    margin-top: 15%;
+    min-height: 300px;
     border-radius: var(--border-rad);
     border:1px solid rgb(100,100,100);
     box-shadow: var(--shadow1);
@@ -40,9 +41,9 @@ body{
     grid-template-rows: 1fr 1fr;
     grid-area: result;
     align-self: flex-start;
-    line-height: 5vh;
+    line-height: 35px;
     text-align: right;
-    height: 10vh;
+    height: 76px;
     padding-right:8px ;
     border-radius: var(--border-rad);
     border:1px solid var(--border);
@@ -52,7 +53,7 @@ body{
   .grp2{
     display: grid;
     grid-area: grp2;
-    line-height: 5vh;
+    line-height: 36px;
     grid-gap:5px;
     grid-template-columns:5fr 1fr;
   }
@@ -118,4 +119,14 @@ body{
   }
   .grp-clear div:hover, .operators div:hover, .numbers div:hover{
     background-color: var(--hover-c);
+  }
+  @media screen and (min-width:800px){
+    .grid-container{
+      font-size: 2vw;
+    }
+  }
+  @media screen and (max-width:400px){
+    .grid-container{
+      font-size: 4.5vw;
+    }
   }
